@@ -1,34 +1,70 @@
-import Logo from "./logo";
+"use client";
 
-export default function Header() {
+import { useState } from "react";
+import Modal from "./components/modal";
+import Header from "../components/header";
+import Footer from "../components/footer";
+
+export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowModal(true);
+  };
+
   return (
-    <header className="text-white rounded-b-[3rem] w-full flex items-center justify-between p-6 ">
-      <div>
-        <Logo />
+    <main className="min-h-screen bg-black text-white flex flex-col">
+      <Header />
+
+      <div className="flex flex-col md:flex-row justify-between px-8 py-12 gap-10">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="w-full md:w-1/2 space-y-4">
+          <h1 className="text-3xl font-bold mb-6">Бүртгүүлэх</h1>
+
+          <input type="text" placeholder="Дэлгүүрийн Нэр" className="input" />
+          <input type="text" placeholder="Утасны дугаар" className="input" />
+          <input type="email" placeholder="И-мэйл хаяг" className="input" />
+          <input type="text" placeholder="Дэлгүүрийн Хаяг" className="input" />
+          <input
+            type="text"
+            placeholder="Яаралтай холбоо барих утас"
+            className="input"
+          />
+          <input
+            type="text"
+            placeholder="Регистрийн дугаар"
+            className="input"
+          />
+          <input
+            type="password"
+            placeholder="Нууц үг үүсгэх"
+            className="input"
+          />
+          <input
+            type="password"
+            placeholder="Нууц үг баталгаажуулах"
+            className="input"
+          />
+
+          <button
+            type="submit"
+            className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-md font-semibold transition"
+          >
+            Бүртгүүлэх
+          </button>
+        </form>
+
+        {/* Optional Side Image */}
+        <div className="hidden md:flex w-1/2 justify-center items-center">
+          <img src="/map.png" alt="Polygon Map" className="max-w-full h-auto" />
+        </div>
       </div>
 
-      <nav className="hidden md:flex flex-1 justify-start text-sm ml-12">
-        <ul className="flex gap-12">
-          <li className="font-bold cursor-pointer hover:text-gray-400">
-            Бидний тухай
-          </li>
-          <li className="font-bold cursor-pointer hover:text-gray-400">
-            Тусламж
-          </li>
-          <li className="font-bold cursor-pointer hover:text-gray-400">
-            Холбоо барих
-          </li>
-        </ul>
-      </nav>
+      <Footer />
 
-      <div className="flex gap-4">
-        <button className="w-24 h-8 bg-purple-600 rounded-full hover:bg-purple-800 transition duration-300">
-          Нэвтрэх
-        </button>
-        <button className="w-24 h-8 bg-gray-400 rounded-full hover:bg-gray-500 transition duration-300">
-          Бүртгүүлэх
-        </button>
-      </div>
-    </header>
+      {/* Modal */}
+      <Modal show={showModal} onClose={() => setShowModal(false)} />
+    </main>
   );
 }

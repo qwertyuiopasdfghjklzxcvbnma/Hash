@@ -52,7 +52,7 @@ const barOptions = {
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");  // Search term state
+  const [searchTerm, setSearchTerm] = useState(""); // Search term state
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
