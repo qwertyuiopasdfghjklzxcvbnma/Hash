@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="flex flex-col  w-full justify-end sm:flex-row gap-4 sm:gap-6 text-sm">
             <h2 className="cursor-pointer hover:text-gray-400">Cookies</h2>
             <h3 className="cursor-pointer hover:text-gray-400">Accessibility</h3>
-            <h4 className="cursor-pointer hover:text-gray-400">About</h4>
+            <h4 className="cursor-pointer hover:text-gray-400">About 2</h4>
           </div>
         </div>
       </footer>
