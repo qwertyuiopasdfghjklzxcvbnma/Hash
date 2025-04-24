@@ -10,8 +10,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import Footer from "@/app/components/footer";
-import Header2 from "@/app/components/header2";
+import Footer from "@/components/footer";
+import Header2 from "@/components/header2";
 import { useState } from "react";
 
 ChartJS.register(

@@ -1,14 +1,31 @@
-import Image from "next/image";
+"use client";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Header2 from "@/components/header2";
+import BackgroundStars from "@/components/stars";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-black">
-        <div className="w-full h-24 bg-purple-800 justify-around">
-          <button><h1>hash</h1></button>
-          <button><h2>zeel nemeh</h2></button>
-          <button><h3>zeeliin tuuh</h3></button>
-          
+    <main className="flex-grow bg-gradient-to-r from-purple-900 via-black to-purple-900 text-white flex flex-col relative">
+      <Header/>
+      <div className="min-h-[70vh] flex flex-col justify-center items-center">
+        {/* Background Stars */}
+        <BackgroundStars />
+        {/* Centered Text */}
+        <div className="relative text-center">
+          <h1 className="text-5xl font-bold">
+            <span className="text-purple-400">Х</span>УРДАН
+          </h1>
+          <h1 className="text-5xl font-bold">
+            <span className="text-purple-400">А</span>ЮУЛГҮЙ
+          </h1>
+          <h1 className="text-5xl font-bold">
+            <span className="text-purple-400">Ш</span>УУРХАЙ
+          </h1>
         </div>
-    </div>
+      </div>
+      <Footer />
+    </main>
   );
 }

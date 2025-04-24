@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Modal({ show, onClose }) {
@@ -7,7 +9,7 @@ export default function Modal({ show, onClose }) {
     <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-center items-center">
       <div className="relative bg-black p-6 rounded-xl shadow-xl max-w-5xl w-full flex justify-center">
         <Image
-          src="/map.png"
+          src="/map.svg"
           alt="Polygonal Mongolia Map"
           width={800}
           height={600}

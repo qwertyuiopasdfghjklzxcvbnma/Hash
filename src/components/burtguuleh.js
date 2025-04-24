@@ -1,8 +1,13 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Logo from "./logo";
 
-export default function Header2() {
+export default function Burtguuleh() {
+  const router = useRouter();
+
   return (
-    <header className="text-white rounded-b-[3rem] w-full flex items-center justify-between p-6 ">
+    <header className="text-white rounded-b-[3rem] w-full flex items-center justify-between p-6">
       <div>
         <Logo />
       </div>
@@ -20,6 +25,13 @@ export default function Header2() {
           </li>
         </ul>
       </nav>
+
+      <button
+        onClick={() => router.push("/signup")}
+        className="w-24 h-8 bg-purple-600 rounded-full hover:bg-purple-800 transition duration-300 z-40"
+      >
+        Нэвтрэх
+      </button>
     </header>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
     return (
       <footer className="text-white w-full flex flex-col items-center px-6 py-12 sm:px-12 sm:py-16 ">
