@@ -8,9 +8,10 @@ import BackgroundStars from "@/components/stars";
 export default function Home() {
   return (
     <main className="flex-grow bg-gradient-to-r from-purple-900 via-black to-purple-900 text-white flex flex-col relative">
-      <Header/>
+      <Header />
       <div className="min-h-[70vh] flex flex-col justify-center items-center">
         {/* Background Stars */}
+
         <BackgroundStars />
         {/* Centered Text */}
         <div className="relative text-center">
